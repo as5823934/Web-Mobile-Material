@@ -1,0 +1,56 @@
+## Short Answer Questions
+1.
+Allow us to derive a new class from existing one. 
+We can tailor a derived class as needed by adding new variables or methods, or by modifying the inherited ones.
+
+2.
+It provide more encapsulation than public visibility, allows a child class to reference a variable or method directly in the child class.
+
+3.
+Super.someMethod()
+
+4.
+The parent class can have many subclass, but subclass can only have one parent.
+
+5.
+Object is defined in java.lang package in java standard class library. All class are derived from object class, so if a class is not explicitly defined to be child of an existing class, it is assumed to be child of the object class.
+
+6.
+Is a placeholder in a class hierarchy that represent a generic concept, can't not be instantiated. The abstract class allows us to establish common elements in a hierarchy that are too generic to instantiate.
+
+7.
+By changing private variables and method to protected, so child class can access it.
+
+8.
+In parent class change final instance to protected.
+
+
+9. ex)      Animals
+        /            \
+    Reptile        Mammal
+       |        /     |        \
+     Iguana   bear   Human  Dolphin
+
+10.
+Common attributes: firstname, lastname, age, id
+Abstract class : work hour
+
+11.
+Child class can override the definition of inherited method.
+Sometimes you might want to use same method but different definition.
+
+12.
+We can use toString to overriding an inherited definition.
+We can override equals in any class to define equality in some appropriate way
+
+
+13.
+toString: return a string that contains the name of object's class with some other info.
+equals : defines the equals method and return true if two string object contains same characters.
+
+14.
+If final is applied to an class means that class can not use by any child class.
+If final is applied to method then that method can not be overridden in any descendent class
+
+15.
+The concept of overriding can be applied to data called shadowing variable.

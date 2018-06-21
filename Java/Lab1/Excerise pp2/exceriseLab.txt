@@ -1,0 +1,99 @@
+Ex 2.1
+The System.out object represents a destination to which we can output this string to monitor.
+
+Ex 2.2
+output:
+Here we go!12345
+Test this is you are not sureAnother
+All done
+Because:
+The print method does not advance to next line but println does.
+
+Ex 2.3
+System.out.println("To be or not to be, " + "that is the question.");
+The string can not broken across two line in the program.
+
+Ex 2.4
+50 plus 25 is 5025
+If one is string , one is number, it will performs String.
+
+Ex 2.5
+He trust his fists
+	against the post
+and still insists
+	he sees the "ghost"
+\n newline
+\t tab
+\" double quote
+
+Ex 2.6
+size = 15
+because:
+int size = 18;
+size = 18 + 12;
+size = 30 * 2;
+size = 60 / 4;
+
+Ex 2.7
+depth = 2.08
+double depth = 2.4;
+depth = 20 - 2.4 * 4;
+depth = 10.4 / 5;
+System.out.println(depth);
+
+Ex 2.8
+length = 1
+
+Ex 2.9
+int total = 5;
+total *= 2;
+total += 10;
+total += total;
+total ++;
+System.out.println(total);
+
+Ex 2.10
+a. 5
+b. 5.0
+c. 3
+d. 3.0
+e. 4.3
+f. 1.3302034428794993
+g. 0
+
+Ex 2.11
+a. 123
+b. 123
+c. 312
+d. 312
+e. 123
+f. 123
+g. 123
+h. 213
+i. 213
+j. 312
+k. 2134
+l. 3124
+m. 1243
+n. 1324
+
+PP 2.1
+System.out.println("\"Lincoln\"");
+
+pp 2.2
+int a = 5;
+int b = 3;
+int c = 4;
+int average = (a+b+c) / 3;
+System.out.println(average);
+
+pp 2.3
+float first = 5, second = 3;
+float sum = first + second;
+float difference = first - second;
+float product = first * second;
+System.out.println("Sum is :" + sum);
+System.out.println("Difference is : " + difference);
+System.out.println("Product is: " + product);
+
+pp 2.4

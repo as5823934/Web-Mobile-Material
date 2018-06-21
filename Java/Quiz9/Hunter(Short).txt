@@ -1,0 +1,63 @@
+## Short Answer Questions
+1.
+To handle exceptions in a program, the line that throws exception is executed in the try block.
+
+2.
+The catch clause has own exception type, when exception occurs, it will match the exception type.
+
+3.
+The statement in the finally clause will always executed.
+
+4.
+The checked exception must be caught by a method or must be listed in throw Clause.
+The unchecked exception does not require explicit handling
+
+5.
+We read information from input stream, and write information to an output stream.
+
+6.
+It will throw an ArrayIndexOutOfBound exception, because array a can only store a[0]-a[49]
+
+7.
+int first;
+Try{
+   first = Integer.parseInt(args[0])
+}catch(NumberFormateException e){
+   System.out.println("Can't convert")
+}
+
+8.
+getMessage()
+getStackTrace()
+
+9.
+Yes
+Under Exception class has many method used to call exception, and user can define an exception by extending the Exception class.
+
+10.
+An exception can be handled at higher level if it is not appropriate to handle it where it occurs.
+
+11.
+An Exception class and Error class are descendants of Throwable class.
+
+12.
+Uses sequence of bytes that flow from a source to a destination
+
+13.
+System.in
+System.out
+System.err
+
+14.
+if(){
+   throw new Exception("message");
+}
+
+15.
+int result;
+try{
+result = 10/0;
+System.out.println(result);
+}catch(ArithmeticException e){
+System.out.println("Message: " + e.getMessage())
+}

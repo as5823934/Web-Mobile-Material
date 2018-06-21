@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sample app</title>
+</head>
+<body>
+	<h1 align="center">Baskin Robins 31</h1>
+	<div id="div1" align="center" >
+		<div v-if="inputShown">
+			<h4>please select # of players</h4>
+		<select v-model ="selected">
+			<option disabled value="">Please select one</option>
+  			<option v-for="option in options" v-bind:value="option.value">{{option.text}}</option>
+		</select>
+		<br>
+		<br>
+		<br>
+		<div v-if="selected === 1 && inputShown">
+			<input type="text" name="" v-model="input_name[0]">
+			<br>
+			<button @click="addPlayer(input_name)">Play</button>
+		</div>
+		<div v-if="selected === 2 && inputShown">
+			<input type="text" name="" v-model="input_name[0]">
+			<input type="text" name="" v-model="input_name[1]">
+			<br>
+			<button @click="addPlayer(input_name)">Play</button>
+		</div>
+		<div v-if="selected === 3 && inputShown">
+			<input type="text" name="" v-model="input_name[0]">
+			<input type="text" name="" v-model="input_name[1]">
+			<input type="text" name="" v-model="input_name[2]">
+			<br>
+			<button @click="addPlayer(input_name)">Play</button>
+		</div>
+		<div v-if="selected === 4 && inputShown">
+			<input type="text" name="" v-model="input_name[0]">
+			<input type="text" name="" v-model="input_name[1]">
+			<input type="text" name="" v-model="input_name[2]">
+			<input type="text" name="" v-model="input_name[3]">
+			<br>
+			<button @click="addPlayer(input_name)">Play</button>
+		</div>
+		</div>
+		<!-- <div>
+			<ul style="list-style-type: none;">
+				<li v-for="player in players">{{player}}</li>
+			</ul>
+		</div> -->
+	
+		<br>
+		<h3 v-if="playerShown">Player: {{input_name[playerindex]}}</h3>
+	</div>
+	<div id="div2">
+		<div style="float: left; margin-left: 30px">
+			<h4>Countdown: {{showTimmer}}</h4>
+			<div v-bind:style="{background: div1_background, width: div1_width + 'px', height: height + 'px'}">
+				<div v-bind:style="{background: div2_background, width: div2_width + 'px', height: height + 'px'}"></div>
+			</div>
+		</div>
+
+		<div>
+			
+
+		</div>
+
+		<div style="float: right; margin-right: 30px">
+			<h3>Current Number: {{numbers[index]}}</h3>
+			<button @click="buttonBox()" style="width: 80px; height: 80px;">{{numbers[index]}}</button>
+			<button @click="buttonBox()" style="width: 80px; height: 80px;">{{numbers[index + 1]}}</button>
+			<button @click="buttonBox()" style="width: 80px; height: 80px;">{{numbers[index + 2]}}</button>
+		</div>
+	</div>
+
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+	<script type="text/javascript">
+
+		let vv = new Vue({
+			el: '#div1',
+			data: {
+				selected: 0,
+				options: [
+				{text: '1 player', value: 1},
+				{text: '2 player', value: 2},
+				{text: '3 player', value: 3},
+				{text: '4 player', value: 4}
+				],
+				input_name: [],
+				players: [],
+				inputShown: true,
+				playerShown: false,
+				playProgressbar: false,
+				playerindex: 0,
+				currentNum: 0,
+			},
+			methods:{
+				addPlayer: function(name){
+					// for (var i = 0; i < this.input_name.length; i++) {
+					// 	this.players.push(name);
+					// }
+					this.players.push(this.input_name);
+					this.inputShown =! this.inputShown;
+					this.playerShown =! this.playerShown;
+					vm.progressbar();
+				}
+			}
+		});
+
+		let vm = new Vue({
+			el: '#div2',
+			data: {
+				div1_background: 'gray',
+				div1_width: 200,
+				height: 20,
+				div2_background: 'blue',
+				div2_width: 200,
+				numbers: [],
+				index: 0,
+				myNum:0,
+				showTimmer: 10,
+				intervalID: null,
+				num : 1,
+				maxNum: 31,
+			},
+			
+			methods: {
+				progressbar: function(){
+					
+					vm.intervalID = setInterval(decreaseWidth, 1000);
+					function decreaseWidth(){
+						if(vm.div2_width <= 0){
+							
+							alert("Timeout!");
+							//clearInterval(i);
+							vm.div2_width =200;
+							vm.showTimmer = 10;
+						} else {
+							vm.div2_width -= 20;
+							vm.showTimmer --;
+						}
+					}
+					
+				},
+				createNum: function(){
+					let n = 1;
+					for (var i = 0; i <= 30;i++) {
+						vm.numbers.push(n + i);
+					}
+					console.log(vm.numbers);
+				},
+				targetNum: function(){
+					vm.myNum = Math.floor((Math.random() * 31) + 1);
+					console.log("Target: " + vm.myNum);
+				},
+				buttonBox: function(){
+					vm.index ++;
+					vm.div2_width = 200;
+					vm.showTimmer = 10;
+					clearInterval(vm.intervalID);
+					vm.progressbar();
+
+					if(vv.playerindex < vv.input_name.length -1){
+						vv.playerindex ++;
+					} else{
+						vv.playerindex = 0;
+					}
+					
+					if(vm.numbers[vm.index] === vm.myNum){
+						alert(vv.input_name[vv.playerindex] + " lose");
+					}
+				}
+			},
+		});
+
+		vm.createNum();
+		vm.targetNum();
+	</script>
+</body>
+</html>

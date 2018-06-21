@@ -1,0 +1,3 @@
+## Free-Response Question
+
+1. Design and implement a set of classes that define various types of reading material: books, novels, megazines, technical journals, textbooks, and so on. Include data values that describe various attributs of the material, such as the number of pages and the names of the primary characters. Include methods that are named appropriately for each class and that print an appropriate message. Create a driver class to instantiate and exercise several of the classes.

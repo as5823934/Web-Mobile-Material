@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sample app</title>
+</head>
+<body>
+	<div id="div1">
+		<h1>Sample Game</h1>
+		<select v-model ="selected">
+			<option disabled value="">Please select one</option>
+  			<!-- <option v-for -->="option in options" v-bind:value="option.value">{{option.text}}</option>
+  			<option v-for="option in options">{{option}}</option>
+		</select>
+		<br>
+		<span>Selected: {{selected}}</span>
+		
+		<button>Play</button>
+		
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+	<script type="text/javascript">
+
+		new Vue({
+			el: '#div1',
+			data: {
+				selected: '',
+				// options: [
+				// {text: 'player 1', value: '1'},
+				// {text: 'player 2', value: '2'},
+				// {text: 'player 3', value: '3'}
+				// ]
+				options: ['Player 1','Player 2','Player 3']
+			}
+		});
+	</script>
+</body>
+</html>

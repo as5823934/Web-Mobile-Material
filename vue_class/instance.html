@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app1">
+		<h1 ref="first">{{ title }}</h1>
+		<h1>{{ lowercaseTitle }}</h1>
+
+	</div>
+
+	<div id="app1">
+		<h1 ref="first">{{ title }}</h1>
+		<h1>{{ lowercaseTitle }}</h1>
+
+	</div>
+
+	<div id="app2">
+		
+	</div>
+
+	<div id="app">
+		<hello></hello>
+		<hello></hello>
+		<hello></hello>
+		<hello></hello>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+	<script type="text/javascript">
+
+		Vue.component('hello', {
+			template: '<h1>This is an mounted element!, Hello!</h1>',
+		});
+
+		new Vue({
+			el: '#app',
+		});
+
+		let vm2 = new Vue({
+			el: "hello",
+			template: '<h1>This is an mounted element!, Hello! {{ world }}</h1>',
+			
+			data: {
+				world: "World"
+			},
+		});
+		vm2.$mount();
+
+
+
+		let vm1 = new Vue({
+			el: "#app1",
+			data: {
+				title: 'HELLO',
+			},
+			methods: {
+
+			},
+			computed: {
+				lowercaseTitle: function() {
+					return this.title.toLowerCase();
+				}
+			},
+			watch: {
+				
+			},
+		});
+		vm1.$mount();
+		document.getElementById('app1').appendChild(vm1.$el);
+
+		// vm.$refs.first.innerHTML = 'hello';
+		// console.log(vm.$refs);
+		console.log(vm1);
+	</script>
+	
+
+</body>
+</html>

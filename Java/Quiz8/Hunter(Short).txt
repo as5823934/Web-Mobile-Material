@@ -1,0 +1,57 @@
+## Short Answer Questions
+1.
+Is a variable that can refer to different types of objects at different in time
+
+2.
+Can refer to an object of its class or to an object of any class that related by inheritance
+
+3.
+Will return 150mph, the getMaxSpeed method in vehicle class has been overrides in car class
+
+4.
+Character c = new FlyingDragon(); will not cause compiler error
+
+5.
+
+
+6.
+Interface is a collection of abstract method and contents
+An extends class can have different class with different methods undertake parent class.
+
+7.
+Compare two object a, b , if obj a is greater than b, it will return positive value
+If obj a == obj b , it will return 0; if obj b is greater than obj a , will return negative.
+
+8.
+
+9. 
+If the "a" class has a method , and b class overrides it, if the reference type is refer to "a" object it will call the a version of method.
+
+10.
+Public interface function{
+Public void play();
+Public void stop();
+Public void pause();
+Public void forward();
+Public void backward();
+}
+
+11.
+if(obj1.compareTo(obj2) > 0){
+	System.out.println("something");
+}
+compareTo return negative , 0 , and positive value.
+It will print if obj1 is > than obj2.
+
+12.
+Yes , if the invocation is bound to the definition of method that is invoked.
+
+13.
+Yes, java allows this referent to join to any object of any compatible type by using inheritance or interface
+
+14.public int Age(){
+	
+	if(person.getAge().
+}
+
+15.

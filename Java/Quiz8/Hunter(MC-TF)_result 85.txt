@@ -1,0 +1,58 @@
+
+    ===== QUIZ 8 Result =====
+    Name: Hunter(MC:TF)
+    =========================
+
+    
+===MUTIPLE CHOICES===
+1. Right!
+2. Right!
+3. Right!
+4. Wrong!
+5. Right!
+6. Wrong!
+7. Right!
+8. Right!
+9. Right!
+10. Right!
+11. Wrong!
+12. Right!
+13. Right!
+14. Wrong!
+15. Right!
+
+===TRUE AND FALSE===
+1. Right!
+2. Wrong!
+3. Right!
+4. Wrong!
+5. Right!
+6. Wrong!
+7. Right!
+8. Wrong!
+9. Wrong!
+10. Wrong!
+
+===SHORT ANSWERS===
+1. Right!
+2. Right!
+3. Right!
+4. Wrong!
+5. Wrong!
+6. Right!
+7. Right!
+8. Wrong!
+9. Right!
+10. Right!
+11. Right!
+12. Right!
+13. Right!
+14. Wrong!
+15. Wrong!
+
+Hunter(MC:TF) - MC SCORE: 11 / 15
+Hunter(MC:TF) - TF SCORE: 4 / 10
+Hunter(MC:TF) - SA SCORE: 10 / 15
+Hunter(MC:TF) - FRQ SCORE: 60 / 60
+
+Total: 85 / 100

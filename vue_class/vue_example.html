@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue js</title>
+</head>
+<body>
+	<div id="app">
+		<h1 v-if="messageShown">{{ message }}</h1>
+		<h1 v-else>{{ city }}</h1>
+		<button @click="changeCity()">Click me</button>
+		<button @click="showMessage()">Show Message!</button>
+		
+		<input type="text" name="" v-model="message">
+		<button @click="addPerson(message)">Add Person</button>
+
+		<ul>
+			<li v-for="person in people">{{ person }}</li>
+		</ul>
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+	<script type="text/javascript">
+		
+		new Vue({
+			el: '#app',
+			data: {
+				message: 'Welcome!',
+				city: 'Vancouver',
+				messageShown: true,
+				people: ['Derrick', 'Ryuma','Alex', 'Miho', 'Hunter']
+			},
+			methods: {
+				changeCity: function() {
+					this.city = "Surrey";
+				},
+				showMessage: function() {
+					this.messageShown =! this.messageShown;
+				},
+				addPerson: function(name) {
+					this.people.push(name);
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>
